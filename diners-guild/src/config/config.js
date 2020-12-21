@@ -8,15 +8,16 @@ import grants from './grants'
 import Loading from 'material-ui-shell/lib/components/Loading/Loading'
 import getDefaultRoutes from './getDefaultRoutes'
 import { defaultUserData, isGranted } from 'rmw-shell/lib/utils/auth'
+import { FIREBASE_DEV_APIKEY, FIREBASE_PROD_APIKEY } from '../.env'
 
 const config = {
   firebase: {
     prod: {
       initConfig: {
-        apiKey: 'AIzaSyBQAmNJ2DbRyw8PqdmNWlePYtMP0hUcjpY',
+        apiKey: { FIREBASE_PROD_APIKEY },
         authDomain: 'react-most-wanted-3b1b2.firebaseapp.com',
         databaseURL: 'https://react-most-wanted-3b1b2.firebaseio.com',
-        projectId: 'react-most-wanted-3b1b2',
+        projectId: 'dinersguildlive',
         storageBucket: 'react-most-wanted-3b1b2.appspot.com',
         messagingSenderId: '258373383650',
         appId: '1:258373383650:web:b49ad5dd28da999a',
@@ -28,10 +29,10 @@ const config = {
     },
     dev: {
       initConfig: {
-        apiKey: 'AIzaSyBQAmNJ2DbRyw8PqdmNWlePYtMP0hUcjpY',
+        apiKey: { FIREBASE_DEV_APIKEY },
         authDomain: 'react-most-wanted-3b1b2.firebaseapp.com',
         databaseURL: 'https://react-most-wanted-3b1b2.firebaseio.com',
-        projectId: 'react-most-wanted-3b1b2',
+        projectId: 'dinersguilddev',
         storageBucket: 'react-most-wanted-3b1b2.appspot.com',
         messagingSenderId: '258373383650',
         appId: '1:258373383650:web:b49ad5dd28da999a',
