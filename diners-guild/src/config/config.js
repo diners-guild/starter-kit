@@ -15,7 +15,7 @@ const config = {
     //getting initConfig's from the Firebase Console website (Project -> Settings -> Your Apps -> CDN)
     prod: {
       initConfig: {
-        apiKey: { FIREBASE_PROD_APIKEY },
+        apiKey: FIREBASE_PROD_APIKEY,
         authDomain: "dinersguildlive.firebaseapp.com",
         projectId: "dinersguildlive",
         storageBucket: "dinersguildlive.appspot.com",
@@ -30,7 +30,7 @@ const config = {
     },
     dev: {
       initConfig: {
-        apiKey: { FIREBASE_DEV_APIKEY },
+        apiKey: FIREBASE_DEV_APIKEY,
         authDomain: "dinersguilddev.firebaseapp.com",
         projectId: "dinersguilddev",
         storageBucket: "dinersguilddev.appspot.com",
