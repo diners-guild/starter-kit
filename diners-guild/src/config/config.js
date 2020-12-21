@@ -8,14 +8,14 @@ import grants from "./grants";
 import Loading from "material-ui-shell/lib/components/Loading/Loading";
 import getDefaultRoutes from "./getDefaultRoutes";
 import { defaultUserData, isGranted } from "rmw-shell/lib/utils/auth";
-// import { FIREBASE_DEV_APIKEY, FIREBASE_PROD_APIKEY } from "../.env";
+import { FIREBASE_DEV_APIKEY, FIREBASE_PROD_APIKEY } from "../.env.json";
 
 const config = {
   firebase: {
     //getting initConfig's from the Firebase Console website (Project -> Settings -> Your Apps -> CDN)
     prod: {
       initConfig: {
-        apiKey: "AIzaSyCOYwh61SrIc62XNwoPubD9SxZFCI",
+        apiKey: { FIREBASE_PROD_APIKEY },
         authDomain: "dinersguildlive.firebaseapp.com",
         projectId: "dinersguildlive",
         storageBucket: "dinersguildlive.appspot.com",
@@ -30,7 +30,7 @@ const config = {
     },
     dev: {
       initConfig: {
-        apiKey: "AIzaSyCOYwh61SrIc62XNwoPubD9SxZFCI-83CA",
+        apiKey: { FIREBASE_DEV_APIKEY },
         authDomain: "dinersguilddev.firebaseapp.com",
         projectId: "dinersguilddev",
         storageBucket: "dinersguilddev.appspot.com",
