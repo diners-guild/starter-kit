@@ -2,6 +2,7 @@ import AccountBoxIcon from '@material-ui/icons/AccountBox'
 import Assignment from '@material-ui/icons/Assignment'
 import Business from '@material-ui/icons/Business'
 import ChromeReaderMode from '@material-ui/icons/ChromeReaderMode'
+import ConfirmationNumberIcon from '@material-ui/icons/ConfirmationNumber';
 import DaschboardIcon from '@material-ui/icons/Dashboard'
 import ExitToAppIcon from '@material-ui/icons/ExitToApp'
 import Web from '@material-ui/icons/Web'
@@ -293,6 +294,15 @@ const getMenuItems = (props) => {
             defaultMessage: 'Roles',
           }),
           leftIcon: <AccountBoxIcon />,
+        },
+        {
+          value: '/manage_coupons',
+          visible: isAuthorised,
+          primaryText: intl.formatMessage({
+            id: 'manage_coupons',
+            defaultMessage: 'Manage Coupons',
+          }),
+          leftIcon: <ConfirmationNumberIcon />,
         },
       ],
     },
