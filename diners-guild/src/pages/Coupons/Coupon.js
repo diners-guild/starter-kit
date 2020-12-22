@@ -15,12 +15,12 @@ const Coupon = () => {
   const { watchList, unwatchList, getList } = useLists()
 
   useEffect(() => {
-    watchList('users')
+    watchList('companies')
 
-    return () => unwatchList('users')
+    return () => unwatchList('companies')
   }, [watchList, unwatchList])
 
-  const users = getList('users')
+  const companyList = getList('companies')
 
   const initialValues = { helper: '', title: '' }
 
@@ -48,7 +48,7 @@ const Coupon = () => {
       handleDelete={() => {
         history.push(`/${path}`)
       }}
-      formProps={{ users }}
+      formProps={{ companyList }}
       Form={Form}
       grants={{
         create: `create_${singular}`,
