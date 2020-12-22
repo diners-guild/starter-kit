@@ -12,7 +12,7 @@ import { useHistory } from 'react-router-dom'
 import { useIntl } from 'react-intl'
 import { useFirebase } from 'rmw-shell/lib/providers/Firebase'
 
-const path = 'tasks' //replace with coupons/new path later
+const path = 'coupons'
 
 const fields = [
   {

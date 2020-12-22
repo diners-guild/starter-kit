@@ -1,12 +1,12 @@
-import Form from '../../../components/Forms/Task'
+import Form from '../../components/Forms/Coupon'
 import React, { useEffect } from 'react'
 import { FormPage } from 'rmw-shell/lib/containers/Page'
 import { useIntl } from 'react-intl'
 import { useParams, useHistory } from 'react-router-dom'
 import { useLists } from 'rmw-shell/lib/providers/Firebase/Lists'
 
-const path = 'tasks'
-const singular = 'task'
+const path = 'coupons'
+const singular = 'coupon'
 
 const Coupon = () => {
   const history = useHistory()

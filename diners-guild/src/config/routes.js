@@ -8,7 +8,7 @@ const Admin = lazy(() => import('../pages/Demo/Admin'))
 const Companies = lazy(() => import('../pages/Demo/Companies'))
 const Company = lazy(() => import('../pages/Demo/Companies/Company'))
 const Coupons = lazy(() => import('../pages/Coupons'))
-// const Coupon = lazy(() => import('../pages/Coupons/Coupon'))
+const Coupon = lazy(() => import('../pages/Coupons/Coupon'))
 const Tasks = lazy(() => import('../pages/Demo/Tasks'))
 const Task = lazy(() => import('../pages/Demo/Tasks/Task'))
 const FirebaseCols = lazy(() => import('../pages/Firebase/Cols'))
@@ -26,8 +26,8 @@ const routes = [
   <Route path="/about" exact component={About} />,
   <Route path="/docu/getting_started" exact component={GettingStarted} />,
   <AuthorizedRoute path="/coupons" exact component={Coupons}/>,
-  // <AuthorizedRoute path="/coupons/:uid" exact component={Coupon}/>,
-  // <AuthorizedRoute path="/create_task" exact component={Coupon} />,
+  <AuthorizedRoute path="/coupons/:uid" exact component={Coupon}/>,
+  <AuthorizedRoute path="/create_coupon" exact component={Coupon} />,
   <AuthorizedRoute path="/dashboard" exact component={Dashboard} />,
   <AuthorizedRoute path="/firebase_paths" exact component={FirebasePaths} />,
   <AuthorizedRoute path="/firebase_lists" exact component={FirebaseLists} />,
