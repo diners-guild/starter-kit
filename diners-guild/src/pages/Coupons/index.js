@@ -5,7 +5,7 @@ import Divider from '@material-ui/core/Divider'
 import ListItem from '@material-ui/core/ListItem'
 import ListItemAvatar from '@material-ui/core/ListItemAvatar'
 import ListItemText from '@material-ui/core/ListItemText'
-//React resources
+// React resources
 import React, { useCallback } from 'react'
 import { ListPage } from 'rmw-shell/lib/containers/Page'
 import { useHistory } from 'react-router-dom'
@@ -16,8 +16,8 @@ const path = 'coupons'
 
 const fields = [
   {
-    name: 'name',
-    label: 'Name',
+    name: 'company',
+    label: 'Company',
   },
   {
     name: 'description',
@@ -57,14 +57,14 @@ const Coupons = () => {
   const { firebaseApp } = useFirebase()
 
   const getRef = useCallback(() => {
-    return firebaseApp.database().ref(`public_tasks`).limitToLast(50)
+    return firebaseApp.database().ref(`public_coupons`).limitToLast(50)
   }, [firebaseApp])
 
   return (
     <ListPage
       reverse
       fields={fields}
-      path={'public_tasks'}
+      path={'public_coupons'}
       getRef={getRef}
       createGrant="create_task"
       Row={Row}

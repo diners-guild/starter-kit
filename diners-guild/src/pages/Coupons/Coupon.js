@@ -26,7 +26,7 @@ const Coupon = () => {
 
   return (
     <FormPage
-      path={'public_tasks'}
+      path={'public_coupons'}
       uid={uid}
       initialValues={initialValues}
       getPageProps={(values) => {
