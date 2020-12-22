@@ -7,6 +7,7 @@ const About = lazy(() => import('../pages/About'))
 const Admin = lazy(() => import('../pages/Demo/Admin'))
 const Companies = lazy(() => import('../pages/Demo/Companies'))
 const Company = lazy(() => import('../pages/Demo/Companies/Company'))
+const Coupon = lazy(() => import('../pages/Coupons'))
 const Tasks = lazy(() => import('../pages/Demo/Tasks'))
 const Task = lazy(() => import('../pages/Demo/Tasks/Task'))
 const FirebaseCols = lazy(() => import('../pages/Firebase/Cols'))
@@ -23,6 +24,7 @@ const GettingStarted = lazy(() =>
 const routes = [
   <Route path="/about" exact component={About} />,
   <Route path="/docu/getting_started" exact component={GettingStarted} />,
+  <Route path="/coupons" exact component={Coupon}/>,
   <AuthorizedRoute path="/dashboard" exact component={Dashboard} />,
   <AuthorizedRoute path="/firebase_paths" exact component={FirebasePaths} />,
   <AuthorizedRoute path="/firebase_lists" exact component={FirebaseLists} />,

@@ -1,3 +1,4 @@
+//icon imports
 import AccountBoxIcon from '@material-ui/icons/AccountBox'
 import Assignment from '@material-ui/icons/Assignment'
 import Business from '@material-ui/icons/Business'
@@ -20,6 +21,7 @@ import Whatshot from '@material-ui/icons/Whatshot'
 import Chat from '@material-ui/icons/Chat'
 import allLocales from './locales'
 import allThemes from './themes'
+import ConfirmationNumberIcon from '@material-ui/icons/ConfirmationNumber';
 
 const getMenuItems = (props) => {
   const {
@@ -129,6 +131,12 @@ const getMenuItems = (props) => {
         defaultMessage: 'Dashboard',
       }),
       leftIcon: <DaschboardIcon />,
+    },
+    {
+      value: '/coupons',
+      visible: true,
+      primaryText: intl.formatMessage({ id: 'coupons', defaultMessage: 'Coupons' }),
+      leftIcon: <ConfirmationNumberIcon />,
     },
     {
       value: '/about',
