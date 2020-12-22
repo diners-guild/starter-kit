@@ -47,7 +47,7 @@ const Form = ({ id, handleSubmit, values, users = [] }) => {
           name="due_to"
           inputVariant="outlined"
           margin="normal"
-          format="DD.MM.YYYY"
+          format="MM.DD.YYYY"
         />
         <br />
 
