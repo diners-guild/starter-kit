@@ -20,7 +20,7 @@ const Coupon = () => {
     return () => unwatchList('companies')
   }, [watchList, unwatchList])
 
-  const companyList = getList('companies')
+  const companies = getList('companies')
 
   const initialValues = { helper: '', title: '' }
 
@@ -48,7 +48,7 @@ const Coupon = () => {
       handleDelete={() => {
         history.push(`/${path}`)
       }}
-      formProps={{ companyList }}
+      formProps={{ companies }}
       Form={Form}
       grants={{
         create: `create_${singular}`,
