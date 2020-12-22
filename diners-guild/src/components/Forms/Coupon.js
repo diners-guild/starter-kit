@@ -6,12 +6,12 @@ import {
 } from 'rmw-shell/lib/components/FormFields'
 
 // eslint-disable-next-line
-const Form = ({ id, handleSubmit, values, companyList = [] }) => {
-  const companies = companyList.map((cL) => {
+const Form = ({ id, handleSubmit, values, companies = [] }) => {
+  const companyOptions = companies.map((cL) => {
     const { key, val } = cL
-    const { displayName } = val
+    const { name } = val
 
-    return { label: displayName, value: key }
+    return { label: name, value: key }
   })
 
   return (
@@ -25,7 +25,7 @@ const Form = ({ id, handleSubmit, values, companyList = [] }) => {
             openOnFocus
             label="Select Company"
             name="company"
-            options={companies}
+            options={companyOptions}
             getOptionValue={(option) => option}
             getOptionLabel={(option) => option.label || ''}
             getOptionSelected={(o, v) => {
