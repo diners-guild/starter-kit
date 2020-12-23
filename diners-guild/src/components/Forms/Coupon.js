@@ -43,14 +43,6 @@ const Form = ({ id, handleSubmit, values, companies = [] }) => {
               return filtered
             }}
           />
-        {/* <TextField
-          label="Company"
-          name="company"
-          variant="outlined"
-          margin="normal"
-          required={true}
-          fullWidth={true}
-        /> */}
         <br />
         <TextField
           label="Description"
