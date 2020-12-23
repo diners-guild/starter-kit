@@ -26,8 +26,10 @@ const fields = [
 ]
 
 const Row = ({ data, index, style }) => {
-  const { title = '', helper = {}, key } = data
+  const { description = '', company = {}, key } = data
+  console.log('DATA', data)
   const history = useHistory()
+//   console.log('HELPE)
 
   return (
     <div key={key} style={style}>
@@ -44,7 +46,7 @@ const Row = ({ data, index, style }) => {
             <FastfoodIcon />
           </Avatar>
         </ListItemAvatar>
-        <ListItemText primary={title} secondary={helper?.label} />
+        <ListItemText primary={company?.label} secondary={description} />
       </ListItem>
       <Divider variant="inset" />
     </div>
