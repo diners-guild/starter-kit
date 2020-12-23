@@ -57,15 +57,15 @@ const Coupon = () => {
       deleteDialogProps={{
         title: intl.formatMessage({
           id: `delete_${singular}_dialog_title`,
-          defaultMessage: 'Delete Task?',
+          defaultMessage: 'Delete Coupon?',
         }),
         message: intl.formatMessage({
           id: `delete_${singular}_dialog_message`,
-          defaultMessage: 'Task will be deleted permanently?',
+          defaultMessage: 'Coupon will be deleted permanently?',
         }),
         action: intl.formatMessage({
           id: `delete_${singular}_dialog_action`,
-          defaultMessage: 'DELETE TASK',
+          defaultMessage: 'DELETE COUPON',
         }),
       }}
     />
