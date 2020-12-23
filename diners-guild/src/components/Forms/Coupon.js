@@ -69,6 +69,17 @@ const Form = ({ id, handleSubmit, values, companies = [] }) => {
             <p>Gift card!</p>
         </div>
         <br />
+        
+        <TextField
+          label="Description"
+          name="description"
+          variant="outlined"
+          margin="normal"
+          fullWidth
+          multiline
+          minRows={2}
+        />
+        <br />
 
         <KeyboardDatePicker
           label={'Expiration Date'}
