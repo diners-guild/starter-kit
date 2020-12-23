@@ -22,7 +22,7 @@ const Coupon = () => {
 
   const companies = getList('companies')
 
-  const initialValues = { helper: '', title: '', triggerAmount: null, rewardAmount: null }
+  const initialValues = { helper: '', title: '' }
 
   return (
     <FormPage
