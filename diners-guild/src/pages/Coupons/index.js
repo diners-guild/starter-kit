@@ -27,6 +27,7 @@ const fields = [
 
 const Row = ({ data, index, style }) => {
   const { triggerAmount = '', rewardAmount = '', company = {}, key } = data
+  
   const history = useHistory()
 
   return (

@@ -16,7 +16,7 @@ const Form = ({ id, handleSubmit, values, companies = [] }) => {
 
 
   return (
-    <form name="myForm"
+    <form
       onSubmit={handleSubmit}
       style={{ display: 'flex', justifyContent: 'center' }}
     >
@@ -25,7 +25,7 @@ const Form = ({ id, handleSubmit, values, companies = [] }) => {
           <Autocomplete
             openOnFocus
             label="Select Company"
-            name="select_company"
+            name="company"
             options={companyOptions}
             getOptionValue={(option) => option}
             getOptionLabel={(option) => option.label || ''}
