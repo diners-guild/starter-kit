@@ -24,7 +24,6 @@ const GettingStarted = lazy(() =>
 
 const routes = [
   <Route path="/about" exact component={About} />,
-  <Route path="/docu/getting_started" exact component={GettingStarted} />,
   <AuthorizedRoute path="/coupons" exact component={Coupons}/>,
   <AuthorizedRoute path="/coupons/:uid" exact component={Coupon}/>,
   <AuthorizedRoute path="/create_coupon" exact component={Coupon} />,
