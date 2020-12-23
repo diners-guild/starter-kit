@@ -22,7 +22,6 @@ import Whatshot from '@material-ui/icons/Whatshot'
 import Chat from '@material-ui/icons/Chat'
 import allLocales from './locales'
 import allThemes from './themes'
-import ConfirmationNumberIcon from '@material-ui/icons/ConfirmationNumber';
 
 const getMenuItems = (props) => {
   const {
