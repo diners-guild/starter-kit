@@ -14,6 +14,7 @@ const Form = ({ id, handleSubmit, values, companies = [] }) => {
     return { label: name, value: key }
   })
 
+
   return (
     <form
       onSubmit={handleSubmit}
@@ -44,6 +45,31 @@ const Form = ({ id, handleSubmit, values, companies = [] }) => {
             }}
           />
         <br />
+        <div>
+            <p><b>Coupon Type:</b> Spend $X, Receive a $Y Gift card</p>
+            <p>Spend</p>&nbsp;
+            <TextField
+                label="X"
+                name="triggerAmount"
+                variant="standard"
+                margin="normal"
+                required={true}
+                fullWidth={false}
+                error={!isFinite(values.triggerAmount) && values.triggerAmount!== undefined}
+            /><p>, Receive a </p>&nbsp;
+            <TextField 
+                label="Y"
+                name="rewardAmount"
+                variant="standard"
+                margin="normal"
+                required={true}
+                fullWidth={false}
+                error={!isFinite(values.rewardAmount) && values.rewardAmount!== undefined}
+            />&nbsp;
+            <p>Gift card!</p>
+        </div>
+        <br />
+
         <TextField
           label="Description"
           name="description"
@@ -56,8 +82,8 @@ const Form = ({ id, handleSubmit, values, companies = [] }) => {
         <br />
 
         <KeyboardDatePicker
-          label={'Due to'}
-          name="due_to"
+          label={'Expiration Date'}
+          name="expiration_date"
           inputVariant="outlined"
           margin="normal"
           format="MM.DD.YYYY"

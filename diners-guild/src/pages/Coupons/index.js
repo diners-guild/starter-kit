@@ -26,10 +26,9 @@ const fields = [
 ]
 
 const Row = ({ data, index, style }) => {
-  const { description = '', company = {}, key } = data
-  console.log('DATA', data)
+  const { triggerAmount = '', rewardAmount = '', company = {}, key } = data
+  
   const history = useHistory()
-//   console.log('HELPE)
 
   return (
     <div key={key} style={style}>
@@ -46,7 +45,7 @@ const Row = ({ data, index, style }) => {
             <FastfoodIcon />
           </Avatar>
         </ListItemAvatar>
-        <ListItemText primary={company?.label} secondary={description} />
+        <ListItemText primary={company?.label} secondary={`Spend $${triggerAmount}, Receive a $${rewardAmount} Gift card!`} />
       </ListItem>
       <Divider variant="inset" />
     </div>
