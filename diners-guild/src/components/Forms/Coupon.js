@@ -49,7 +49,7 @@ const Form = ({ id, handleSubmit, values, companies = [] }) => {
             <p><b>Coupon Type:</b> Spend $X, Receive a $Y Gift card</p>
             <p>Spend</p>&nbsp;
             <TextField
-                label="$X"
+                label="X"
                 name="triggerAmount"
                 variant="standard"
                 margin="normal"
@@ -58,7 +58,7 @@ const Form = ({ id, handleSubmit, values, companies = [] }) => {
                 error={!isFinite(values.triggerAmount) && values.triggerAmount!== undefined}
             /><p>, Receive a </p>&nbsp;
             <TextField 
-                label="$Y"
+                label="Y"
                 name="rewardAmount"
                 variant="standard"
                 margin="normal"
@@ -69,7 +69,7 @@ const Form = ({ id, handleSubmit, values, companies = [] }) => {
             <p>Gift card!</p>
         </div>
         <br />
-        
+
         <TextField
           label="Description"
           name="description"
