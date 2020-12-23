@@ -66,7 +66,7 @@ const Coupons = () => {
       fields={fields}
       path={'public_coupons'}
       getRef={getRef}
-      createGrant="create_task"
+      createGrant="create_coupon"
       Row={Row}
       listProps={{ itemSize: 72 }}
       getPageProps={() => {
@@ -78,7 +78,7 @@ const Coupons = () => {
         }
       }}
       onCreateClick={() => {
-        history.push('/create_task')
+        history.push('/create_coupon')
       }}
     />
   )
