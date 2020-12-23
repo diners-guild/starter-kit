@@ -14,8 +14,9 @@ const Form = ({ id, handleSubmit, values, companies = [] }) => {
     return { label: name, value: key }
   })
 
+
   return (
-    <form
+    <form name="myForm"
       onSubmit={handleSubmit}
       style={{ display: 'flex', justifyContent: 'center' }}
     >
@@ -24,7 +25,7 @@ const Form = ({ id, handleSubmit, values, companies = [] }) => {
           <Autocomplete
             openOnFocus
             label="Select Company"
-            name="company"
+            name="select_company"
             options={companyOptions}
             getOptionValue={(option) => option}
             getOptionLabel={(option) => option.label || ''}
@@ -44,20 +45,47 @@ const Form = ({ id, handleSubmit, values, companies = [] }) => {
             }}
           />
         <br />
-        <TextField
-          label="Description"
-          name="description"
-          variant="outlined"
-          margin="normal"
-          fullWidth
-          multiline
-          minRows={2}
-        />
+        <div>
+            <p><b>Coupon Type:</b> Spend $X, Receive a $Y Gift card</p>
+            <p>Spend</p>&nbsp;
+            <TextField
+                label="$X"
+                name="triggerAmount"
+                variant="standard"
+                margin="normal"
+                required={true}
+                fullWidth={false}
+                error={!isFinite(values.triggerAmount) && values.triggerAmount!== undefined}
+                // helperText={error ? "Error msg" : ""}
+            /><p>, Receive a </p>&nbsp;
+            <TextField 
+                label="$Y"
+                name="rewardAmount"
+                variant="standard"
+                margin="normal"
+                required={true}
+                fullWidth={false}
+                error={!isFinite(values.$rewardAmount) && values.triggerAmount!== undefined}
+                // helperText={error ? "Error msg" : ""}
+            />&nbsp;
+            <p>Gift card!</p>
+        </div>
         <br />
 
+        {/* testing error props */}
+        <TextField error
+            // label="Error"
+            name="error"
+            variant="standard"
+            margin="normal"
+            required={true}
+            fullWidth={false}
+            helperText="Entry must be a number"
+            />
+
         <KeyboardDatePicker
-          label={'Due to'}
-          name="due_to"
+          label={'Expiration Date'}
+          name="expiration_date"
           inputVariant="outlined"
           margin="normal"
           format="MM.DD.YYYY"
