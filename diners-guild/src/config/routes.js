@@ -18,9 +18,6 @@ const FirebaseMessaging = lazy(() => import('../pages/Firebase/Messaging'))
 const FirebasePaths = lazy(() => import('../pages/Firebase/Paths'))
 const FirebaseStorage = lazy(() => import('../pages/Firebase/Storage'))
 const Dashboard = lazy(() => import('../pages/Dashboard'))
-const GettingStarted = lazy(() =>
-  import('../pages/Documentation/GettingStarted')
-)
 
 const routes = [
   <Route path="/about" exact component={About} />,
