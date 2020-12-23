@@ -94,6 +94,14 @@
         ".write": "auth != null && root.child('admins/'+auth.uid).exists()"
       }
     },
+    "public_coupons": {
+      ".read": "auth != null",
+      ".write": "auth != null"
+    },
+    "public_coupons_count": {
+      ".read": true,
+      ".write": "auth != null"
+    },
     "public_tasks": {
       ".read": "auth != null",
       ".write": "auth != null"
