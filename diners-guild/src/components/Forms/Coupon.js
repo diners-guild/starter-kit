@@ -56,7 +56,6 @@ const Form = ({ id, handleSubmit, values, companies = [] }) => {
                 required={true}
                 fullWidth={false}
                 error={!isFinite(values.triggerAmount) && values.triggerAmount!== undefined}
-                // helperText={error ? "Error msg" : ""}
             /><p>, Receive a </p>&nbsp;
             <TextField 
                 label="$Y"
@@ -65,23 +64,11 @@ const Form = ({ id, handleSubmit, values, companies = [] }) => {
                 margin="normal"
                 required={true}
                 fullWidth={false}
-                error={!isFinite(values.$rewardAmount) && values.triggerAmount!== undefined}
-                // helperText={error ? "Error msg" : ""}
+                error={!isFinite(values.rewardAmount) && values.rewardAmount!== undefined}
             />&nbsp;
             <p>Gift card!</p>
         </div>
         <br />
-
-        {/* testing error props */}
-        <TextField error
-            // label="Error"
-            name="error"
-            variant="standard"
-            margin="normal"
-            required={true}
-            fullWidth={false}
-            helperText="Entry must be a number"
-            />
 
         <KeyboardDatePicker
           label={'Expiration Date'}
