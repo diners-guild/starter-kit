@@ -27,9 +27,7 @@ const fields = [
 
 const Row = ({ data, index, style }) => {
   const { description = '', company = {}, key } = data
-  console.log('DATA', data)
   const history = useHistory()
-//   console.log('HELPE)
 
   return (
     <div key={key} style={style}>
