@@ -12,9 +12,6 @@ const Coupon = lazy(() => import('../pages/Coupons/Coupon'))
 const Tasks = lazy(() => import('../pages/Demo/Tasks'))
 const Task = lazy(() => import('../pages/Demo/Tasks/Task'))
 const Dashboard = lazy(() => import('../pages/Dashboard'))
-// const GettingStarted = lazy(() =>
-//   import('../pages/Documentation/GettingStarted')
-// )
 
 const routes = [
   <Route path="/about" exact component={About} />,
