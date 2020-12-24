@@ -45,26 +45,29 @@ const Form = ({ id, handleSubmit, values, companies = [] }) => {
             }}
           />
         <br />
-        <div>
-            <p><b>Coupon Type:</b> Spend $X, Receive a $Y Gift card</p>
+        
+        <p><b>Coupon Type:</b> Spend $X, Receive a $Y Gift card</p>
+        <div 
+            style={{
+                display: "flex",
+                alignItems: "center",
+            }}>
             <p>Spend</p>&nbsp;
             <TextField
-                label="X"
                 name="triggerAmount"
-                variant="standard"
+                variant="outlined"
                 margin="normal"
                 required={true}
-                fullWidth={false}
                 error={!isFinite(values.triggerAmount) && values.triggerAmount!== undefined}
+                style={{ width: "50px"}}
             /><p>, Receive a </p>&nbsp;
             <TextField 
-                label="Y"
                 name="rewardAmount"
-                variant="standard"
+                variant="outlined"
                 margin="normal"
                 required={true}
-                fullWidth={false}
                 error={!isFinite(values.rewardAmount) && values.rewardAmount!== undefined}
+                style={{ width: "50px"}}
             />&nbsp;
             <p>Gift card!</p>
         </div>
