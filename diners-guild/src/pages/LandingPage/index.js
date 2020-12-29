@@ -117,7 +117,7 @@ const LandingPage = () => {
                 }}
               >
                 <img
-                  src={'/rmw.svg'}
+                  src={'/rmw.png'}
                   alt="logo"
                   style={{
                     height: 35,
@@ -159,7 +159,7 @@ const LandingPage = () => {
                 }}
               >
                 <img
-                  src={'/rmw.svg'}
+                  src={'/rmw.png'}
                   alt="logo"
                   style={{ height: 150, maxWidth: 280, justifySelf: 'center' }}
                 />
@@ -167,13 +167,13 @@ const LandingPage = () => {
                 <div style={{ padding: 8 }}>
                   <h3
                     style={{
-                      color: 'red',
+                      color: '#00FECA',
                       textAlign: 'center',
                       fontWeight: 'bold',
                       fontSize: 50,
                     }}
                   >
-                    REACT MOST WANTED
+                    DINER'S GUILD
                   </h3>
 
                   <h4
@@ -184,7 +184,7 @@ const LandingPage = () => {
                       marginTop: -40,
                     }}
                   >
-                    React Starter-Kit with all Most Wanted features
+                    The most convenient coupon app
                   </h4>
                 </div>
               </div>
@@ -221,6 +221,7 @@ const LandingPage = () => {
                       margin: 30,
                       borderRadius: '40px',
                       fontSize: 'bold',
+                      backgroundColor: "#E91E63"
                     }}
                     aria-label="Start button"
                     variant="contained"
