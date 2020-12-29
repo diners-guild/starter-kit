@@ -34,15 +34,6 @@ service cloud.firestore {
 
     /// RULES START ///
 
-
-    match /tasks {
-      allow read, write: if isSignedIn();
-      match /{document=**}{
-        allow read,write: if isSignedIn();
-
-      }
-    }
-
     match /test {
       allow read, write: if isSignedIn();
       match /{document=**}{
