@@ -148,28 +148,6 @@ const getMenuItems = (props) => {
     },
     {
       primaryText: intl.formatMessage({
-        id: 'demos',
-        defaultMessage: 'Demos',
-      }),
-      visible: isAuthorised,
-      primaryTogglesNestedList: true,
-      leftIcon: <Slideshow />,
-      nestedItems: [
-
-        {
-          value: '/tasks',
-          visible: isAuthorised,
-          primaryText: intl.formatMessage({
-            id: 'tasks',
-            defaultMessage: 'Tasks',
-          }),
-          leftIcon: <Assignment />,
-        },
-      ],
-    },
-
-    {
-      primaryText: intl.formatMessage({
         id: 'wallet',
         defaultMessage: 'Wallet',
       }),
