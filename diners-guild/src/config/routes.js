@@ -4,7 +4,6 @@ import React, { lazy } from 'react'
 import { Route } from 'react-router-dom'
 
 const About = lazy(() => import('../pages/About'))
-const Admin = lazy(() => import('../pages/Demo/Admin'))
 const Companies = lazy(() => import('../pages/Demo/Companies'))
 const Company = lazy(() => import('../pages/Demo/Companies/Company'))
 const Coupons = lazy(() => import('../pages/Coupons'))
@@ -22,7 +21,7 @@ const routes = [
   <AuthorizedRoute path="/coupons" exact component={Coupons}/>,
   <AuthorizedRoute path="/coupons/:uid" exact component={Coupon}/>,
   <AuthorizedRoute path="/create_coupon" exact component={Coupon} />,
-  <AuthorizedRoute path="/admin" exact component={Admin} />,
+  <AuthorizedRoute path="/dashboard" exact component={Dashboard} />,
   <AuthorizedRoute path="/companies" exact component={Companies} />,
   <AuthorizedRoute path="/companies/:uid" exact component={Company} />,
   <AuthorizedRoute path="/create_company" exact component={Company} />,
