@@ -156,15 +156,6 @@ const getMenuItems = (props) => {
       leftIcon: <CreditCardIcon />,
       nestedItems: [
         {
-          value: '/admin',
-          visible: !isAdmin,
-          primaryText: intl.formatMessage({
-            id: 'admin',
-            defaultMessage: 'Admin',
-          }),
-          leftIcon: <Security />,
-        },
-        {
           value: '/virtual_cards',
           visible: isGranted(auth, 'read_companies'),
           primaryText: intl.formatMessage({
