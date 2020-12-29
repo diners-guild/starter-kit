@@ -22,7 +22,6 @@ const routes = [
   <AuthorizedRoute path="/coupons/:uid" exact component={Coupon}/>,
   <AuthorizedRoute path="/create_coupon" exact component={Coupon} />,
   <AuthorizedRoute path="/dashboard" exact component={Dashboard} />,
-  <AuthorizedRoute path="/admin" exact component={Admin} />,
   <AuthorizedRoute path="/companies" exact component={Companies} />,
   <AuthorizedRoute path="/companies/:uid" exact component={Company} />,
   <AuthorizedRoute path="/create_company" exact component={Company} />,
