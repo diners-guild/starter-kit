@@ -155,15 +155,7 @@ const getMenuItems = (props) => {
       primaryTogglesNestedList: true,
       leftIcon: <Slideshow />,
       nestedItems: [
-        {
-          value: '/companies',
-          visible: isGranted(auth, 'read_companies'),
-          primaryText: intl.formatMessage({
-            id: 'companies',
-            defaultMessage: 'Companies',
-          }),
-          leftIcon: <Business />,
-        },
+
         {
           value: '/tasks',
           visible: isAuthorised,
@@ -233,6 +225,15 @@ const getMenuItems = (props) => {
       visible: isAdmin,
       leftIcon: <Security />,
       nestedItems: [
+        {
+          value: '/companies',
+          visible: isAuthorised || isGranted(auth, 'read_companies'),
+          primaryText: intl.formatMessage({
+            id: 'companies',
+            defaultMessage: 'Companies',
+          }),
+          leftIcon: <Business />,
+        },
         {
           value: '/users',
           visible: isAuthorised,
