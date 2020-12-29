@@ -6,7 +6,7 @@ const Footer = () => {
     <React.Fragment>
       <div
         style={{
-          height: '400px',
+          height: '800px',
           //width: '100%',
           backgroundImage: 'url(bottom.jpg)',
           backgroundRepeat: 'no-repeat',
@@ -35,7 +35,7 @@ const Footer = () => {
         }}
         id="footer-text"
       >
-        {`© ${new Date().getFullYear()} Copyright: yourcompany.com! All Rights Reserved`}
+        {`© ${new Date().getFullYear()} Copyright: dinersguild.com All Rights Reserved`}
       </AppBar>
     </React.Fragment>
   )
