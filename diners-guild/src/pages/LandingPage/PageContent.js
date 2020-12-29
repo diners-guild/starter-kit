@@ -3,8 +3,6 @@ import Typography from '@material-ui/core/Typography'
 import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
 import TrackChanges from '@material-ui/icons/TrackChanges'
-import FileCopy from '@material-ui/icons/FileCopy'
-import IconButton from '@material-ui/core/IconButton'
 
 const PackageCard = ({ title, command, description, icons }) => {
   return (
@@ -13,38 +11,6 @@ const PackageCard = ({ title, command, description, icons }) => {
         <Typography gutterBottom variant="h4" component="h2">
           {title}
         </Typography>
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'row',
-            backgroundColor: '#F3F4F4',
-            padding: 8,
-          }}
-        >
-          <Typography
-            gutterBottom
-            variant="body1"
-            color="textSecondary"
-            component="h2"
-          >
-            {command}
-          </Typography>
-          <IconButton
-            aria-label="Icon button"
-            onClick={() => {
-              if (window.clipboardData) {
-                // Internet Explorer
-                window.clipboardData.setData('Text', command)
-              } else {
-                try {
-                  navigator.clipboard.writeText(command)
-                } catch (error) {}
-              }
-            }}
-          >
-            <FileCopy />
-          </IconButton>
-        </div>
         <br />
         {icons}
         <br />
@@ -65,7 +31,7 @@ const PageContent = ({ setComponents }) => {
         //color="textSecondary"
         style={{ margin: 16, textAlign: 'center' }}
       >
-        A solution for every project
+        Join the Guild
       </Typography>
       <Typography
         variant="h5"
@@ -73,8 +39,7 @@ const PageContent = ({ setComponents }) => {
         color="textSecondary"
         style={{ margin: 16, textAlign: 'center' }}
       >
-        Choose from 3 different starter kits. From a basic one to a full
-        featured application.
+        Support local businesses in a convenient way
       </Typography>
       <div style={{ height: 30 }} />
 
@@ -88,8 +53,7 @@ const PageContent = ({ setComponents }) => {
         }}
       >
         <PackageCard
-          title={'base-shell'}
-          command={'npx create-react-app my-app --template base'}
+          title={'Sign Up for FREE'}
           description={
             'The basic react setup: routing, internationalization and async load.'
           }
@@ -110,8 +74,7 @@ const PageContent = ({ setComponents }) => {
           }
         />
         <PackageCard
-          title={'material-ui-shell'}
-          command={'npx create-react-app my-app --template material-ui'}
+          title={'Get your Card'}
           description={
             'Includes all features from the base shell expanded with Material-UI.'
           }
@@ -133,8 +96,7 @@ const PageContent = ({ setComponents }) => {
           }
         />
         <PackageCard
-          title={'rmw-shell'}
-          command={'npx create-react-app my-app --template rmw'}
+          title={'Shop and Save'}
           description={'Base shell + Material UI shell + Firebase'}
           icons={
             <div
@@ -171,10 +133,10 @@ const PageContent = ({ setComponents }) => {
         <div style={{ height: 30 }} />
         <Typography
           variant="h3"
-          //color="textSecondary"
+          color="textSecondary"
           style={{ margin: 16, textAlign: 'center', color: 'white' }}
         >
-          Not just a template
+          Hassle-free
         </Typography>
         <Typography
           variant="h5"
