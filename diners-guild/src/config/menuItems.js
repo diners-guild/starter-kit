@@ -127,7 +127,7 @@ const getMenuItems = (props) => {
     },
     {
       value: '/dashboard',
-      visible: isAuthorised,
+      visible: isAdmin,
       primaryText: intl.formatMessage({
         id: 'dashboard',
         defaultMessage: 'Dashboard',
