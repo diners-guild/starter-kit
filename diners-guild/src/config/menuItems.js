@@ -230,15 +230,15 @@ const getMenuItems = (props) => {
           }),
           leftIcon: <AccountBoxIcon />,
         },
-        {
-          value: '/manage_coupons',
-          visible: isAuthorised,
-          primaryText: intl.formatMessage({
-            id: 'manage_coupons',
-            defaultMessage: 'Manage Coupons',
-          }),
-          leftIcon: <ConfirmationNumberIcon />,
-        },
+        // {  // TODO set up company admin flow where users can add manage there own coupon experience.
+        //   value: '/manage_coupons',
+        //   visible: isAuthorised,
+        //   primaryText: intl.formatMessage({
+        //     id: 'manage_coupons',
+        //     defaultMessage: 'Manage Coupons',
+        //   }),
+        //   leftIcon: <ConfirmationNumberIcon />,
+        // },
       ],
     },
     { divider: true },
