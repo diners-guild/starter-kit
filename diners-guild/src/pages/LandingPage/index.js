@@ -44,7 +44,7 @@ const LandingPage = () => {
   const sections = [
     {
       name: 'start',
-      onClick: () => history.push('/dashboard'),
+      onClick: () => history.push('/coupons'),
     },
     {
       name: 'components',
@@ -228,7 +228,7 @@ const LandingPage = () => {
                     color="secondary"
                     name={'signin'}
                     onClick={() => {
-                      history.push('/dashboard')
+                      history.push('/coupons')
                     }}
                   >
                     Start
