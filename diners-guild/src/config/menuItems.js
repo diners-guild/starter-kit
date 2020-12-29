@@ -20,7 +20,6 @@ import SettingsSystemDaydreamIcon from '@material-ui/icons/SettingsSystemDaydrea
 import SettingsIcon from '@material-ui/icons/SettingsApplications'
 import Slideshow from '@material-ui/icons/Slideshow'
 import StyleIcon from '@material-ui/icons/Style'
-import Chat from '@material-ui/icons/Chat'
 //other
 import React from 'react'
 import allLocales from './locales'
@@ -146,12 +145,6 @@ const getMenuItems = (props) => {
       visible: true,
       primaryText: intl.formatMessage({ id: 'about', defaultMessage: 'About' }),
       leftIcon: <InfoOutlined />,
-    },
-    {
-      value: '/chats',
-      visible: isAuthorised,
-      primaryText: intl.formatMessage({ id: 'chats', defaultMessage: 'Chats' }),
-      leftIcon: <Chat />,
     },
     {
       primaryText: intl.formatMessage({
