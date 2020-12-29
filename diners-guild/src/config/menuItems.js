@@ -4,6 +4,7 @@ import Assignment from '@material-ui/icons/Assignment'
 import Business from '@material-ui/icons/Business'
 import ChromeReaderMode from '@material-ui/icons/ChromeReaderMode'
 import ConfirmationNumberIcon from '@material-ui/icons/ConfirmationNumber';
+import CreditCardIcon from '@material-ui/icons/CreditCard';
 import DaschboardIcon from '@material-ui/icons/Dashboard'
 import ExitToAppIcon from '@material-ui/icons/ExitToApp'
 import Web from '@material-ui/icons/Web'
@@ -13,12 +14,14 @@ import LanguageIcon from '@material-ui/icons/Language'
 import LockIcon from '@material-ui/icons/Lock'
 import MenuOpenIcon from '@material-ui/icons/MenuOpen'
 import People from '@material-ui/icons/People'
-import React from 'react'
+import ReceiptIcon from '@material-ui/icons/Receipt';
 import Security from '@material-ui/icons/Security'
+import SettingsSystemDaydreamIcon from '@material-ui/icons/SettingsSystemDaydream';
 import SettingsIcon from '@material-ui/icons/SettingsApplications'
 import Slideshow from '@material-ui/icons/Slideshow'
 import StyleIcon from '@material-ui/icons/Style'
-import Whatshot from '@material-ui/icons/Whatshot'
+//other
+import React from 'react'
 import allLocales from './locales'
 import allThemes from './themes'
 
@@ -153,6 +156,15 @@ const getMenuItems = (props) => {
       leftIcon: <Slideshow />,
       nestedItems: [
         {
+          value: '/admin',
+          visible: !isAdmin,
+          primaryText: intl.formatMessage({
+            id: 'admin',
+            defaultMessage: 'Admin',
+          }),
+          leftIcon: <Security />,
+        },
+        {
           value: '/companies',
           visible: isGranted(auth, 'read_companies'),
           primaryText: intl.formatMessage({
@@ -169,6 +181,54 @@ const getMenuItems = (props) => {
             defaultMessage: 'Tasks',
           }),
           leftIcon: <Assignment />,
+        },
+      ],
+    },
+
+    {
+      primaryText: intl.formatMessage({
+        id: 'wallet',
+        defaultMessage: 'Wallet',
+      }),
+      visible: isAuthorised,
+      primaryTogglesNestedList: true,
+      leftIcon: <CreditCardIcon />,
+      nestedItems: [
+        {
+          value: '/admin',
+          visible: !isAdmin,
+          primaryText: intl.formatMessage({
+            id: 'admin',
+            defaultMessage: 'Admin',
+          }),
+          leftIcon: <Security />,
+        },
+        {
+          value: '/virtual_cards',
+          visible: isGranted(auth, 'read_companies'),
+          primaryText: intl.formatMessage({
+            id: 'virtual_cards',
+            defaultMessage: 'Virtual Cards',
+          }),
+          leftIcon: <SettingsSystemDaydreamIcon />,
+        },
+        {
+          value: '/physical_cards',
+          visible: isAuthorised,
+          primaryText: intl.formatMessage({
+            id: 'physical_cards',
+            defaultMessage: 'Physical Cards',
+          }),
+          leftIcon: <CreditCardIcon />,
+        },
+        {
+          value: '/transactions',
+          visible: isAuthorised,
+          primaryText: intl.formatMessage({
+            id: 'transactions',
+            defaultMessage: 'Transactions',
+          }),
+          leftIcon: <ReceiptIcon />,
         },
       ],
     },
