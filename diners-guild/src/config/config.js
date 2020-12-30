@@ -17,11 +17,12 @@ const config = {
       initConfig: {
         apiKey: FIREBASE_PROD_APIKEY,
         authDomain: "dinersguildlive.firebaseapp.com",
+        databaseURL: "https://dinersguildlive-default-rtdb.firebaseio.com/",
         projectId: "dinersguildlive",
         storageBucket: "dinersguildlive.appspot.com",
         messagingSenderId: "252454744274",
         appId: "1:252454744274:web:ffed196ada2fe5f749fd0b",
-        measurementId: "G-25976HB2WM",
+        measurementId: "G-25976HB2WM"
       },
       messaging: {
         publicVapidKey:
@@ -32,6 +33,7 @@ const config = {
       initConfig: {
         apiKey: FIREBASE_DEV_APIKEY,
         authDomain: "dinersguilddev.firebaseapp.com",
+        databaseURL: "https://dinersguilddev-default-rtdb.firebaseio.com/",
         projectId: "dinersguilddev",
         storageBucket: "dinersguilddev.appspot.com",
         messagingSenderId: "56032715344",
