@@ -166,7 +166,7 @@ const PageContent = ({ setComponents }) => {
         >
           Use the app to find businesses you want to support. 
           Use your card to automatically redeem coupons without 
-          having to go through the hassle of validating with the person at the register.
+          having to go through the hassle of validating with the cashier.
         </Typography>
         <div style={{ height: 50 }} />
       </div>
