@@ -1,8 +1,14 @@
 import React from 'react'
-import Typography from '@material-ui/core/Typography'
+import Button from '@material-ui/core/Button'
 import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
 import TrackChanges from '@material-ui/icons/TrackChanges'
+import Typography from '@material-ui/core/Typography'
+import { useHistory } from 'react-router-dom'
+//icons
+import LaptopMacIcon from '@material-ui/icons/LaptopMac';
+import CardGiftcardIcon from '@material-ui/icons/CardGiftcard';
+import StorefrontIcon from '@material-ui/icons/Storefront';
 
 const PackageCard = ({ title, command, description, icons }) => {
   return (
@@ -23,6 +29,8 @@ const PackageCard = ({ title, command, description, icons }) => {
 }
 
 const PageContent = ({ setComponents }) => {
+  const history = useHistory()
+
   return (
     <React.Fragment>
       <div style={{ height: 20 }} />
@@ -55,7 +63,7 @@ const PageContent = ({ setComponents }) => {
         <PackageCard
           title={'Sign Up for FREE'}
           description={
-            'The basic react setup: routing, internationalization and async load.'
+            'Connect with any account (Google, Facebook, etc.) and start using this easy-to-use app!'
           }
           icons={
             <div
@@ -65,9 +73,9 @@ const PageContent = ({ setComponents }) => {
                 justifyContent: 'space-around',
               }}
             >
-              <img
-                src="react.png"
-                alt="react"
+              <LaptopMacIcon
+                fontSize="large"
+                alt="cell phone icon with profile information"
                 style={{ width: 50, aspectRatio: 1.11 }}
               />
             </div>
@@ -76,7 +84,7 @@ const PageContent = ({ setComponents }) => {
         <PackageCard
           title={'Get your Card'}
           description={
-            'Includes all features from the base shell expanded with Material-UI.'
+            'Receive your virtual credit card - get your rewards added onto the same card after redeeming a coupon.'
           }
           icons={
             <div
@@ -86,18 +94,17 @@ const PageContent = ({ setComponents }) => {
                 justifyContent: 'space-around',
               }}
             >
-              <img
-                src="react.png"
-                alt="react"
+              <CardGiftcardIcon
+                fontSize="large"
+                alt="credit card icon"
                 style={{ width: 50, aspectRatio: 1.11 }}
               />
-              <img src="material-ui.png" alt="react" style={{ width: 50 }} />
             </div>
           }
         />
         <PackageCard
           title={'Shop and Save'}
-          description={'Base shell + Material UI shell + Firebase'}
+          description={'Time to look at available coupons and start amping up those savings!'}
           icons={
             <div
               style={{
@@ -106,13 +113,13 @@ const PageContent = ({ setComponents }) => {
                 justifyContent: 'space-around',
               }}
             >
-              <img
-                src="react.png"
-                alt="react"
+              <StorefrontIcon
+                fontSize="large"
+                alt="shopping bag icon"
                 style={{ width: 50, aspectRatio: 1.11 }}
               />
-              <img src="material-ui.png" alt="react" style={{ width: 50 }} />
-              <img src="firebase.png" alt="react" style={{ width: 50 }} />
+              {/* <img src="material-ui.png" alt="react" style={{ width: 50 }} />
+              <img src="firebase.png" alt="react" style={{ width: 50 }} /> */}
             </div>
           }
         />
@@ -143,7 +150,7 @@ const PageContent = ({ setComponents }) => {
           component="div"
           style={{ margin: 16, textAlign: 'center', color: 'grey' }}
         >
-          But also not a framework.
+          Redeem savings without having a coupon
         </Typography>
         <div
           style={{
@@ -159,9 +166,9 @@ const PageContent = ({ setComponents }) => {
           component="div"
           style={{ margin: 16, textAlign: 'center', color: 'grey' }}
         >
-          You start easy like with every other template but you can also update
-          the template parts over the time. And with the updates you don't only
-          update the components but also get new features and get bugfixes.
+          Use the app to find businesses you want to support. 
+          Use your card to automatically redeem coupons without 
+          having to go through the hassle of validating with the person at the register.
         </Typography>
         <div style={{ height: 50 }} />
       </div>
@@ -172,7 +179,7 @@ const PageContent = ({ setComponents }) => {
         //color="textSecondary"
         style={{ margin: 16, textAlign: 'center' }}
       >
-        Only the best
+        Business Owners, it's time to sign up!
       </Typography>
       <Typography
         variant="h5"
@@ -180,8 +187,9 @@ const PageContent = ({ setComponents }) => {
         color="textSecondary"
         style={{ margin: 16, textAlign: 'center' }}
       >
-        Every template is a collection of very carefully picked packages and
-        projects. Only the creme de la creme of the react ecosystem
+        In the Diner’s Guild community you get to create deals, 
+        view reports, and save on money because there’s no monthly 
+        subscription fee! Only pay for the number of customers that are using your coupon.
       </Typography>
       <div style={{ height: 30 }} />
       <div
@@ -192,9 +200,24 @@ const PageContent = ({ setComponents }) => {
           flexWrap: 'wrap',
         }}
       >
-        <img src="react.png" alt="react" style={{ width: 150 }} />
-        <img src="material-ui.png" alt="react" style={{ width: 150 }} />
-        <img src="firebase.png" alt="react" style={{ width: 150 }} />
+        <Button
+          size="large"
+          style={{
+            margin: 30,
+            borderRadius: '40px',
+            fontSize: 'bold',
+            backgroundColor: "#E91E63"
+          }}
+          aria-label="Sign Up button"
+          variant="contained"
+          color="secondary"
+          name={'signin'}
+          onClick={() => {
+            history.push('/coupons')
+          }}
+        >
+          Sign Up Now
+      </Button>
       </div>
       <div style={{ height: 50 }} />
     </React.Fragment>
