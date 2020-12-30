@@ -157,9 +157,9 @@ const LandingPage = () => {
                 }}
               >
                 <img
-                  src={'/DG-main-logo.png'}
+                  src={'/DG-logo.svg'}
                   alt="Diner's Guild logo. A shield with a neon fork and knife crossed as its emblem with 'Diner's Guild' banner above."
-                  style={{ height: 150, maxWidth: 280, justifySelf: 'center' }}
+                  style={{ height: 250, maxWidth: 280, justifySelf: 'center' }}
                 />
 
                 <div style={{ padding: 8 }}>
