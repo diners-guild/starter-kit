@@ -9,6 +9,7 @@ import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles'
 import CircularProgress from '@material-ui/core/CircularProgress'
 import Button from '@material-ui/core/Button'
 import { useHistory } from 'react-router-dom'
+import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
 
 const PageContent = lazy(() => import('./PageContent'))
 const Footer = lazy(() => import('./Footer'))
@@ -116,13 +117,10 @@ const LandingPage = () => {
                   scrollTo(top)
                 }}
               >
-                <img
-                  src={'/DG-logo.png'}
-                  alt="Dinger's Guild logo. A shield with a neon fork and knife crossed as its emblem."
+                <ArrowUpwardIcon 
                   style={{
                     height: 35,
                     justifySelf: 'center',
-                    color: 'white',
                     marginLeft: 12,
                     display: transparent ? 'none' : undefined,
                   }}
@@ -159,8 +157,8 @@ const LandingPage = () => {
                 }}
               >
                 <img
-                  src={'/DG-logo.png'}
-                  alt="Diner's Guild logo"
+                  src={'/DG-main-logo.png'}
+                  alt="Diner's Guild logo. A shield with a neon fork and knife crossed as its emblem with 'Diner's Guild' banner above."
                   style={{ height: 150, maxWidth: 280, justifySelf: 'center' }}
                 />
 
@@ -241,7 +239,7 @@ const LandingPage = () => {
                 )}
               </Paper>
             </div>
-            <div style={{ height: 200 }}></div>
+            <div style={{ height: 100 }}></div>
             {scrolled && (
               <Suspense fallback={<CircularProgress />}>
                 <Footer />
