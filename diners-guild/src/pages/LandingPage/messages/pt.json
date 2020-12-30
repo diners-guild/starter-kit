@@ -1,6 +1,6 @@
 {
     "intro": "React Starter-Kit com todos os recursos mais procurados ",
-    "title": " REACT MOST WANTED ",
+    "title": " DINER'S GUILD ",
     "start": "GET STARTED",
     "instal": "Instalação",
     "run": "Execute esse script para iniciar:",
@@ -16,6 +16,6 @@
     "try_it_out": "Experimentar",
     "about": "Sobre",
     "team": "Time",
-    "about_text": "React Most Wanted é apenas uma aplicação de demonstração, não tente encontrar algo útil para fazer com ela. O foco aqui é somente o código e como construir aplicações React com Material-UI e Firebase."
+    "about_text": "Dinger's Guild é apenas uma aplicação de demonstração, não tente encontrar algo útil para fazer com ela. O foco aqui é somente o código e como construir aplicações React com Material-UI e Firebase."
   }
   

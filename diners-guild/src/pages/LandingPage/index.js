@@ -83,7 +83,7 @@ const LandingPage = () => {
             }
           />
 
-          <title>React Most Wanted</title>
+          <title>Diner's Guild</title>
         </Helmet>
         <Scrollbars
           ref={(e) => {
