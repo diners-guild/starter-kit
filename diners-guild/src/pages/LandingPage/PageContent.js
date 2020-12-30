@@ -118,8 +118,6 @@ const PageContent = ({ setComponents }) => {
                 alt="shopping bag icon"
                 style={{ width: 50, aspectRatio: 1.11 }}
               />
-              {/* <img src="material-ui.png" alt="react" style={{ width: 50 }} />
-              <img src="firebase.png" alt="react" style={{ width: 50 }} /> */}
             </div>
           }
         />
