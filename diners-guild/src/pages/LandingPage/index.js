@@ -30,7 +30,6 @@ const LandingPage = () => {
   const [scrollbar, setScrollbar] = useState(null)
   const [transparent, setTransparent] = useState(true)
   const [scrolled, setScrolled] = useState(false)
-  const [components, setComponents] = useState(null)
   const [top, setTop] = useState(null)
   const history = useHistory()
 
@@ -46,16 +45,7 @@ const LandingPage = () => {
     {
       name: 'start',
       onClick: () => history.push('/coupons'),
-    },
-    {
-      name: 'components',
-      onClick: () => {
-        setScrolled(true)
-        setTimeout(() => {
-          scrollTo(components)
-        }, 500)
-      },
-    },
+    }
   ]
 
   return (
@@ -234,7 +224,7 @@ const LandingPage = () => {
                 </div>
                 {scrolled && (
                   <Suspense fallback={<CircularProgress />}>
-                    <PageContent setComponents={setComponents} />
+                    <PageContent />
                   </Suspense>
                 )}
               </Paper>
