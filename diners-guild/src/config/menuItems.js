@@ -1,6 +1,5 @@
 //icon imports
 import AccountBoxIcon from '@material-ui/icons/AccountBox'
-import Assignment from '@material-ui/icons/Assignment'
 import Business from '@material-ui/icons/Business'
 import ChromeReaderMode from '@material-ui/icons/ChromeReaderMode'
 import ConfirmationNumberIcon from '@material-ui/icons/ConfirmationNumber';
@@ -18,7 +17,6 @@ import ReceiptIcon from '@material-ui/icons/Receipt';
 import Security from '@material-ui/icons/Security'
 import SettingsSystemDaydreamIcon from '@material-ui/icons/SettingsSystemDaydream';
 import SettingsIcon from '@material-ui/icons/SettingsApplications'
-import Slideshow from '@material-ui/icons/Slideshow'
 import StyleIcon from '@material-ui/icons/Style'
 //other
 import React from 'react'
