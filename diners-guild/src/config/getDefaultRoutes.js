@@ -10,9 +10,6 @@ const User = lazy(() => import('rmw-shell/lib/pages/Users/User'))
 const Roles = lazy(() => import('rmw-shell/lib/pages/Roles'))
 const Role = lazy(() => import('rmw-shell/lib/pages/Roles/Role'))
 const ManageCoupons = lazy(() => import('../pages/ManageCoupons'))
-const Chats = lazy(() => import('rmw-shell/lib/pages/Chats'))
-const CreateChat = lazy(() => import('rmw-shell/lib/pages/CreateChat'))
-const GroupChat = lazy(() => import('rmw-shell/lib/pages/GroupChat'))
 const EditMembers = lazy(() => import('rmw-shell/lib/pages/EditMembers'))
 const EditAdmins = lazy(() => import('rmw-shell/lib/pages/EditAdmins'))
 
@@ -24,13 +21,8 @@ const getDefaultRoutes = (appConfig) => {
       exact
       component={SignIn}
     />,
-    <AuthorizedRoute path="/chats" exact component={Chats} />,
-    <AuthorizedRoute path="/chats/:uid" exact component={Chats} />,
-    <AuthorizedRoute path="/create_chat" exact component={CreateChat} />,
     <AuthorizedRoute path="/edit_members/:uid" exact component={EditMembers} />,
     <AuthorizedRoute path="/edit_admins/:uid" exact component={EditAdmins} />,
-    <AuthorizedRoute path="/group_chat" exact component={GroupChat} />,
-    <AuthorizedRoute path="/group_chat/:uid" exact component={GroupChat} />,
     <AuthorizedRoute path="/roles" exact component={Roles} />,
     <AuthorizedRoute path="/manage_coupons" exact component={ManageCoupons} />,
     <AuthorizedRoute path="/create_role" exact component={Role} />,

@@ -20,7 +20,6 @@ import SettingsSystemDaydreamIcon from '@material-ui/icons/SettingsSystemDaydrea
 import SettingsIcon from '@material-ui/icons/SettingsApplications'
 import Slideshow from '@material-ui/icons/Slideshow'
 import StyleIcon from '@material-ui/icons/Style'
-import Chat from '@material-ui/icons/Chat'
 //other
 import React from 'react'
 import allLocales from './locales'
@@ -128,7 +127,7 @@ const getMenuItems = (props) => {
     },
     {
       value: '/dashboard',
-      visible: isAuthorised,
+      visible: isAdmin,
       primaryText: intl.formatMessage({
         id: 'dashboard',
         defaultMessage: 'Dashboard',
@@ -148,51 +147,6 @@ const getMenuItems = (props) => {
       leftIcon: <InfoOutlined />,
     },
     {
-      value: '/chats',
-      visible: isAuthorised,
-      primaryText: intl.formatMessage({ id: 'chats', defaultMessage: 'Chats' }),
-      leftIcon: <Chat />,
-    },
-    {
-      primaryText: intl.formatMessage({
-        id: 'demos',
-        defaultMessage: 'Demos',
-      }),
-      visible: isAuthorised,
-      primaryTogglesNestedList: true,
-      leftIcon: <Slideshow />,
-      nestedItems: [
-        {
-          value: '/admin',
-          visible: !isAdmin,
-          primaryText: intl.formatMessage({
-            id: 'admin',
-            defaultMessage: 'Admin',
-          }),
-          leftIcon: <Security />,
-        },
-        {
-          value: '/companies',
-          visible: isGranted(auth, 'read_companies'),
-          primaryText: intl.formatMessage({
-            id: 'companies',
-            defaultMessage: 'Companies',
-          }),
-          leftIcon: <Business />,
-        },
-        {
-          value: '/tasks',
-          visible: isAuthorised,
-          primaryText: intl.formatMessage({
-            id: 'tasks',
-            defaultMessage: 'Tasks',
-          }),
-          leftIcon: <Assignment />,
-        },
-      ],
-    },
-
-    {
       primaryText: intl.formatMessage({
         id: 'wallet',
         defaultMessage: 'Wallet',
@@ -201,15 +155,6 @@ const getMenuItems = (props) => {
       primaryTogglesNestedList: true,
       leftIcon: <CreditCardIcon />,
       nestedItems: [
-        {
-          value: '/admin',
-          visible: !isAdmin,
-          primaryText: intl.formatMessage({
-            id: 'admin',
-            defaultMessage: 'Admin',
-          }),
-          leftIcon: <Security />,
-        },
         {
           value: '/virtual_cards',
           visible: isGranted(auth, 'read_companies'),
@@ -250,6 +195,15 @@ const getMenuItems = (props) => {
       leftIcon: <Security />,
       nestedItems: [
         {
+          value: '/companies',
+          visible: isAuthorised || isGranted(auth, 'read_companies'),
+          primaryText: intl.formatMessage({
+            id: 'companies',
+            defaultMessage: 'Companies',
+          }),
+          leftIcon: <Business />,
+        },
+        {
           value: '/users',
           visible: isAuthorised,
           primaryText: intl.formatMessage({
@@ -267,15 +221,15 @@ const getMenuItems = (props) => {
           }),
           leftIcon: <AccountBoxIcon />,
         },
-        {
-          value: '/manage_coupons',
-          visible: isAuthorised,
-          primaryText: intl.formatMessage({
-            id: 'manage_coupons',
-            defaultMessage: 'Manage Coupons',
-          }),
-          leftIcon: <ConfirmationNumberIcon />,
-        },
+        // {  // TODO set up company admin flow where users can add manage there own coupon experience.
+        //   value: '/manage_coupons',
+        //   visible: isAuthorised,
+        //   primaryText: intl.formatMessage({
+        //     id: 'manage_coupons',
+        //     defaultMessage: 'Manage Coupons',
+        //   }),
+        //   leftIcon: <ConfirmationNumberIcon />,
+        // },
       ],
     },
     { divider: true },
