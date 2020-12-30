@@ -63,9 +63,8 @@ const config = {
     firebaseuiProps: {
       signInOptions: [
         "google.com",
-        "facebook.com",
-        "twitter.com",
-        "github.com",
+        // "facebook.com",
+        // "twitter.com",
         "password",
         "phone",
       ],
