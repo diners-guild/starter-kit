@@ -63,6 +63,7 @@ const config = {
     firebaseuiProps: {
       signInOptions: [
         "google.com",
+        //commenting out facebook and twitter until further update -- only showing working signin options
         // "facebook.com",
         // "twitter.com",
         "password",
