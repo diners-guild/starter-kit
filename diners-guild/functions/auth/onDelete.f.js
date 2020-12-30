@@ -32,20 +32,20 @@ export default functions.auth.user().onDelete(async (user, context) => {
   }
 
   const mailOptions = {
-    from: `"Tarik Huber" <${gmail.email}>`,
+    from: `"Rachele Edwards" <${gmail.email}>`,
     to: email,
     subject: `Bye!`,
     text: `
 Hi ${displayName}!,
 
-We confirm that your React Most Wanted account is deleted.
+We confirm that your Diner's Guild account is deleted.
 All data related to it is also deleted!
 
 Thanks again for checking out the demo :)
-If you have any suggestion to improve it feel free to response to this E-Mail.
+If you have any suggestions to improve the demo please respond to this E-Mail.
 
 Cheers,
-Tarik
+Rachele
 
 This is an automated E-Mail.
 `,

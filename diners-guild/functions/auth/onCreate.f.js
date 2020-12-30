@@ -53,20 +53,19 @@ export default functions.auth.user().onCreate(async (userRecord, context) => {
 
   if (email) {
     const mailOptions = {
-      from: `"Tarik Huber" <${gmail.email}>`,
+      from: `"Rachele Edwards" <${gmail.email}>`,
       to: email,
-      subject: `Welcome to React Most Wanted!`,
+      subject: `Welcome to Diner's Guild!`,
       text: `
 Hi ${displayName}!, 
 
-Welcome to React Most Wanted. I hope you will enjoy the demo application. 
+Welcome to Diner's Guild. I hope you enjoy the demo application. 
 
-Thank you for checking out the demo application :)
 If you have any questions or need help feel free to reply to this E-Mail.
 
 
 Cheers, 
-Tarik
+Rachele
 
 This is an automated E-Mail. 
 `,

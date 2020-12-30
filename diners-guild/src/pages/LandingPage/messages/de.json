@@ -1,6 +1,6 @@
 {
   "intro": "React Starterkit mit allen Meist Gesucht Ausstattungen",
-  "title": "REACT MEIST GESUCHT",
+  "title": "DINER'S GUILD",
   "start": "STARTEN",
   "instal": "Installation",
   "run": "Einfach dieses Skript starten:",
@@ -16,5 +16,5 @@
   "about": "Über",
   "team": "Team",
   "try_it_out": "Probier es aus",
-  "about_text": "React Most Wanted is just a DEMO applications. Don't try to find something usefull to do with this DEMO. The focus here is only on the code and how to build react applications using Material-UI and Firebase."
+  "about_text": "Diner's Guild is a DEMO application. The focus here is on the code and how to build react applications using Material-UI and Firebase."
 }
