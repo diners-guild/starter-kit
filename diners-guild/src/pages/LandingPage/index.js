@@ -117,8 +117,8 @@ const LandingPage = () => {
                 }}
               >
                 <img
-                  src={'/rmw.png'}
-                  alt="logo"
+                  src={'/DG-logo.png'}
+                  alt="Dinger's Guild logo. A shield with a neon fork and knife crossed as its emblem."
                   style={{
                     height: 35,
                     justifySelf: 'center',
@@ -159,8 +159,8 @@ const LandingPage = () => {
                 }}
               >
                 <img
-                  src={'/rmw.png'}
-                  alt="logo"
+                  src={'/DG-logo.png'}
+                  alt="Diner's Guild logo"
                   style={{ height: 150, maxWidth: 280, justifySelf: 'center' }}
                 />
 
