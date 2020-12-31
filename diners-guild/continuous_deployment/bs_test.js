@@ -6,7 +6,7 @@ const sleep = ms => {
 
 module.exports.runTest = async driver => {
   try {
-    await driver.get('https://www.react-most-wanted.com')
+    await driver.get('https://www.dinersguild.com')
 
     await sleep(2000)
 

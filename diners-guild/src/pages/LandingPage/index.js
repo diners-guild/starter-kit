@@ -59,7 +59,7 @@ const LandingPage = () => {
             content="width=device-width, initial-scale=1, minimum-scale=1, minimal-ui"
           />
           <link rel="shortcut icon" href="/favicon.ico" />
-          <link rel="canonical" href="https://www.react-most-wanted.com" />
+          <link rel="canonical" href="https://www.dinersguild.com" />
           <meta
             name="keywords"
             content={
