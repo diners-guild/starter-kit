@@ -125,7 +125,7 @@ const AboutPageContent = () => {
         style={{ margin: 16, textAlign: "center" }}
       >
         {intl.formatMessage({
-          id: "betterForBusenesses",
+          id: "betterForBusinesses",
           defaultMessage: `With Bryan’s experience working with restaurants and businesses alike
           for software, he saw that most SaaS software to promote restaurants is
           great, but it can also impose restaurants like a tax. Apps like GrubHub
