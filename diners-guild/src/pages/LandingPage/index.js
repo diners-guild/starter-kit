@@ -245,7 +245,7 @@ const LandingPage = () => {
               style={{
                 height: '800px',
                 //width: '100%',
-                backgroundImage: 'url(bottom.jpg)',
+                backgroundImage: 'url(burger.jpg)',
                 backgroundRepeat: 'no-repeat',
                 backgroundAttachment: 'fixed',
                 backgroundPosition: 'center',

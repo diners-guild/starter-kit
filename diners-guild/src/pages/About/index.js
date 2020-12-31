@@ -120,7 +120,7 @@ image showing but can change when About page design changes in future releases*/
         style={{
           height: '800px',
           //width: '100%',
-          backgroundImage: 'url(bottom.jpg)',
+          backgroundImage: 'url(pastries.jpg)',
           backgroundRepeat: 'no-repeat',
           backgroundAttachment: 'fixed',
           backgroundPosition: 'center',
