@@ -11,7 +11,7 @@ import Button from '@material-ui/core/Button'
 import { useHistory } from 'react-router-dom'
 import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
 
-const PageContent = lazy(() => import('./PageContent'))
+const LandingPageContent = lazy(() => import('./PageContent'))
 const Footer = lazy(() => import('./Footer'))
 const ResponsiveMenu = lazy(() =>
   import('rmw-shell/lib/containers/ResponsiveMenu')
@@ -234,7 +234,7 @@ const LandingPage = () => {
                 </div>
                 {scrolled && (
                   <Suspense fallback={<CircularProgress />}>
-                    <PageContent setComponents={setComponents} />
+                    <LandingPageContent setComponents={setComponents} />
                   </Suspense>
                 )}
               </Paper>
