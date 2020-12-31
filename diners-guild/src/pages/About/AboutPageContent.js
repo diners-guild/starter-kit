@@ -103,7 +103,12 @@ const AboutPageContent = () => {
         variant="h3"
         //color="textSecondary"
         style={{ margin: 16, textAlign: "center" }}
-      ></Typography>
+      >
+         {intl.formatMessage({
+          id: "benefittingLocalBusinesses",
+          defaultMessage: `Benefitting Local Businesses`,
+        })}
+      </Typography>
       <Typography
         variant="h5"
         component="div"
