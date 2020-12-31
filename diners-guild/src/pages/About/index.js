@@ -1,32 +1,13 @@
-import React, { useState, lazy, Suspense } from "react";
-import Card from "@material-ui/core/Card";
-import CardContent from "@material-ui/core/CardContent";
+import React, { lazy, Suspense } from "react";
 import Page from "material-ui-shell/lib/containers/Page/Page";
 import Typography from "@material-ui/core/Typography";
 import { useIntl } from "react-intl";
-import { usePaths } from "rmw-shell/lib/providers/Firebase/Paths";
 import Paper from "@material-ui/core/Paper";
-import Toolbar from "@material-ui/core/Toolbar";
-import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import CircularProgress from "@material-ui/core/CircularProgress";
-import Button from "@material-ui/core/Button";
 import { useHistory } from "react-router-dom";
-import ArrowUpwardIcon from "@material-ui/icons/ArrowUpward";
-
+//variables for our component imports
 const AboutPageContent = lazy(() => import("./AboutPageContent"));
 const Footer = lazy(() => import("../LandingPage/Footer"));
-const ResponsiveMenu = lazy(() =>
-  import("rmw-shell/lib/containers/ResponsiveMenu")
-);
-
-const theme = createMuiTheme({
-  palette: {
-    primary: { main: "#242424" },
-    secondary: {
-      main: "#c62828",
-    },
-  },
-});
 
 const AboutPage = () => {
   const history = useHistory();
