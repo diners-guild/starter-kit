@@ -29,7 +29,6 @@ const PackageCard = ({ title, command, description, icons }) => {
 }
 
 const LandingPageContent = ( ) => {
-
   const history = useHistory()
 
   return (
