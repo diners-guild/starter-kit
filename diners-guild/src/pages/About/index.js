@@ -65,7 +65,10 @@ const AboutPage = () => {
                   fontSize: 50,
                 }}
               >
-                A modern and convenient coupon app
+                {intl.formatMessage({
+                  id: "modernAndConvenient",
+                  defaultMessage: "A modern and convenient coupon app",
+                })}
               </Typography>
 
               <Typography
@@ -77,9 +80,12 @@ const AboutPage = () => {
                   fontSize: 25,
                 }}
               >
-                Our mission is to build a community connecting local businesses
-                with their customers using technology to build convenient and
-                seamless interactions
+                {intl.formatMessage({
+                  id: "ourMissionIs",
+                  defaultMessage: `Our mission is to build a community connecting local businesses
+                  with their customers using technology to build convenient and
+                  seamless interactions`,
+                })}
               </Typography>
             </div>
           </div>
@@ -108,6 +114,23 @@ const AboutPage = () => {
           </Paper>
         </div>
         <div style={{ height: 100 }}></div>
+{/* For bottom image before Footer - Took out of Footer for now to have different 
+image showing but can change when About page design changes in future releases*/}
+        <div
+        style={{
+          height: '800px',
+          //width: '100%',
+          backgroundImage: 'url(bottom.jpg)',
+          backgroundRepeat: 'no-repeat',
+          backgroundAttachment: 'fixed',
+          backgroundPosition: 'center',
+          backgroundSize: 'cover',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          flexDirection: 'column',
+        }}
+      />
         <Suspense fallback={<CircularProgress />}>
           <Footer />
         </Suspense>
