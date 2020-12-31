@@ -28,7 +28,7 @@ const PackageCard = ({ title, command, description, icons }) => {
   )
 }
 
-const PageContent = ({ setComponents }) => {
+const LandingPageContent = ({ setComponents }) => {
   const history = useHistory()
 
   return (
@@ -222,4 +222,4 @@ const PageContent = ({ setComponents }) => {
   )
 }
 
-export default PageContent
+export default LandingPageContent
