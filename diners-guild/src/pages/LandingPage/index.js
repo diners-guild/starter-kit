@@ -240,6 +240,22 @@ const LandingPage = () => {
               </Paper>
             </div>
             <div style={{ height: 100 }}></div>
+{/* For bottom image before Footer */}
+            <div
+              style={{
+                height: '800px',
+                //width: '100%',
+                backgroundImage: 'url(bottom.jpg)',
+                backgroundRepeat: 'no-repeat',
+                backgroundAttachment: 'fixed',
+                backgroundPosition: 'center',
+                backgroundSize: 'cover',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                flexDirection: 'column',
+              }}
+            />
             {scrolled && (
               <Suspense fallback={<CircularProgress />}>
                 <Footer />
