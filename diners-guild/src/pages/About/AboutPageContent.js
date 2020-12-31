@@ -78,18 +78,18 @@ const AboutPageContent = () => {
       <Typography
         variant="h3"
         //color="textSecondary"
-        style={{ margin: 16, textAlign: "center" }}
+        style={{ margin: 16, textAlign: "center", color: "white" }}
       >
         {intl.formatMessage({
           id: "benefitCustomers",
-          defaultMessage: `Benefitting Customers`,
+          defaultMessage: `Benefitting Customers`
         })}
       </Typography>
       <Typography
         variant="h5"
         component="div"
         color="textSecondary"
-        style={{ margin: 16, textAlign: "center" }}
+        style={{ margin: 16, textAlign: "center", color: "white" }}
       >
         {intl.formatMessage({
           id: "keepTrack",
