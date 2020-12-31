@@ -67,6 +67,14 @@ const AboutPageContent = () => {
           easier.”`,
         })}
       </Typography>
+      <div
+        style={{
+          paddingTop: 16,
+          paddingBottom: 16,
+          backgroundColor: '#2D2D2D',
+          backgroundImage: 'radial-gradient( #4F4F4F,#242424)',
+        }}
+      >
       <Typography
         variant="h3"
         //color="textSecondary"
@@ -74,7 +82,7 @@ const AboutPageContent = () => {
       >
         {intl.formatMessage({
           id: "benefitCustomers",
-          defaultMessage: `Benefitting the Customers`,
+          defaultMessage: `Benefitting Customers`,
         })}
       </Typography>
       <Typography
@@ -99,6 +107,7 @@ const AboutPageContent = () => {
           phone to click ‘Redeem’ and verify it with the cashier.`,
         })}
       </Typography>
+      </div>
       <Typography
         variant="h3"
         //color="textSecondary"
