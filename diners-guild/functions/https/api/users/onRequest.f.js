@@ -5,8 +5,8 @@ import express from 'express'
 
 let whitelist = [
   'http://localhost:3000',
-  'https://react-most-wanted.com',
-  'https://www.react-most-wanted.com',
+  'https://dinersguild.com',
+  'https://www.dinersguild.com',
 ]
 
 const corsOptions = {

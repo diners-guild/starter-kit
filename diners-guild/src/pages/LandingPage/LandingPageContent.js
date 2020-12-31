@@ -28,7 +28,8 @@ const PackageCard = ({ title, command, description, icons }) => {
   )
 }
 
-const LandingPageContent = ({ setComponents }) => {
+const LandingPageContent = () => {
+
   const history = useHistory()
 
   return (
@@ -124,13 +125,7 @@ const LandingPageContent = ({ setComponents }) => {
       </div>
       <div style={{ height: 30 }} />
       <div
-        ref={(r) => {
-          if (r) {
-            setComponents(r)
-          }
-        }}
         style={{
-          //height: 400,
           backgroundColor: '#2D2D2D',
           backgroundImage: 'radial-gradient( #4F4F4F,#242424)',
         }}

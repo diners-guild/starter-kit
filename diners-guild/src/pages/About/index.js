@@ -14,6 +14,7 @@ const AboutPage = () => {
   const intl = useIntl();
 
   return (
+<<<<<<< HEAD
     <Page
       pageTitle={intl.formatMessage({
         id: "about",
