@@ -11,7 +11,7 @@ import Button from '@material-ui/core/Button'
 import { useHistory } from 'react-router-dom'
 import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
 
-const PageContent = lazy(() => import('./PageContent'))
+const LandingPageContent = lazy(() => import('./LandingPageContent'))
 const Footer = lazy(() => import('./Footer'))
 const ResponsiveMenu = lazy(() =>
   import('rmw-shell/lib/containers/ResponsiveMenu')
@@ -224,12 +224,28 @@ const LandingPage = () => {
                 </div>
                 {scrolled && (
                   <Suspense fallback={<CircularProgress />}>
-                    <PageContent />
+                    <LandingPageContent />
                   </Suspense>
                 )}
               </Paper>
             </div>
             <div style={{ height: 100 }}></div>
+{/* For bottom image before Footer */}
+            <div
+              style={{
+                height: '800px',
+                //width: '100%',
+                backgroundImage: 'url(burger.jpg)',
+                backgroundRepeat: 'no-repeat',
+                backgroundAttachment: 'fixed',
+                backgroundPosition: 'center',
+                backgroundSize: 'cover',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                flexDirection: 'column',
+              }}
+            />
             {scrolled && (
               <Suspense fallback={<CircularProgress />}>
                 <Footer />
